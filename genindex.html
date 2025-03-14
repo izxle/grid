@@ -32,8 +32,9 @@
 
           
           
-          <a href="index.html" class="icon icon-home">
-            grid
+          <a href="index.html">
+            
+              <img src="_static/grid_logo_website.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -141,10 +142,22 @@
 <li class="toctree-l3"><a class="reference internal" href="notebooks/molecular_grid.html#Example:-Electron-Density">Example: Electron Density</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/molecular_grid.html#Local-Properties">Local Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/molecular_grid.html#Interpolation">Interpolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/molecular_grid.html#Derivative-Interpolation">Derivative Interpolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/molecular_grid.html#Solving-Poisson-Equation">Solving Poisson Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/molecular_grid.html#Local-Properties">Local Properties</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/molecular_grid.html#Example:-Atomic-charges-from-molecular-electron-density">Example: Atomic charges from molecular electron density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/molecular_grid.html#Interpolation">Interpolation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/molecular_grid.html#id1">Example: Electron Density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/molecular_grid.html#Derivative-Interpolation">Derivative Interpolation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/molecular_grid.html#Example:-Weizsacker-Kinetic-Energy-Density">Example: Weizsacker Kinetic Energy Density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/molecular_grid.html#Solving-Poisson-Equation">Solving Poisson Equation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/molecular_grid.html#Example:-Electrostatic-Potential">Example: Electrostatic Potential</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/cubic_grid.html">Cubic Grids</a><ul>
@@ -194,6 +207,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pyapi/grid.cubic.html">grid.cubic module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyapi/grid.hirshfeld.html">grid.hirshfeld module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyapi/grid.molgrid.html">grid.molgrid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyapi/grid.ngrid.html">grid.ngrid module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyapi/grid.ode.html">grid.ode module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyapi/grid.onedgrid.html">grid.onedgrid module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyapi/grid.periodicgrid.html">grid.periodicgrid module</a></li>
@@ -325,6 +339,8 @@
 </li>
         <li><a href="pyapi/grid.rtransform.html#grid.rtransform.MultiExpRTransform.__init__">(MultiExpRTransform method)</a>
 </li>
+        <li><a href="pyapi/grid.ngrid.html#grid.ngrid.Ngrid.__init__">(Ngrid method)</a>
+</li>
         <li><a href="pyapi/grid.basegrid.html#grid.basegrid.OneDGrid.__init__">(OneDGrid method)</a>
 </li>
         <li><a href="pyapi/grid.periodicgrid.html#grid.periodicgrid.PeriodicGrid.__init__">(PeriodicGrid method)</a>
@@ -373,6 +389,8 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyapi/grid.rtransform.html#grid.rtransform.HyperbolicRTransform.a">a (HyperbolicRTransform property)</a>
+</li>
+      <li><a href="pyapi/grid.periodicgrid.html#grid.periodicgrid.PeriodicGridWarning.add_note">add_note() (PeriodicGridWarning method)</a>
 </li>
       <li><a href="pyapi/grid.molgrid.html#grid.molgrid.MolGrid.aim_weights">aim_weights (MolGrid property)</a>
 </li>
@@ -779,6 +797,8 @@
 </li>
         <li><a href="pyapi/grid.molgrid.html#grid.molgrid.MolGrid.get_localgrid">(MolGrid method)</a>
 </li>
+        <li><a href="pyapi/grid.ngrid.html#grid.ngrid.Ngrid.get_localgrid">(Ngrid method)</a>
+</li>
         <li><a href="pyapi/grid.basegrid.html#grid.basegrid.OneDGrid.get_localgrid">(OneDGrid method)</a>
 </li>
         <li><a href="pyapi/grid.periodicgrid.html#grid.periodicgrid.PeriodicGrid.get_localgrid">(PeriodicGrid method)</a>
@@ -882,6 +902,13 @@
 
       <ul>
         <li><a href="pyapi/grid.molgrid.html#module-grid.molgrid">module</a>
+</li>
+      </ul></li>
+      <li>
+    grid.ngrid
+
+      <ul>
+        <li><a href="pyapi/grid.ngrid.html#module-grid.ngrid">module</a>
 </li>
       </ul></li>
       <li>
@@ -998,6 +1025,8 @@
         <li><a href="pyapi/grid.onedgrid.html#grid.onedgrid.MidPoint.integrate">(MidPoint method)</a>
 </li>
         <li><a href="pyapi/grid.molgrid.html#grid.molgrid.MolGrid.integrate">(MolGrid method)</a>
+</li>
+        <li><a href="pyapi/grid.ngrid.html#grid.ngrid.Ngrid.integrate">(Ngrid method)</a>
 </li>
         <li><a href="pyapi/grid.basegrid.html#grid.basegrid.OneDGrid.integrate">(OneDGrid method)</a>
 </li>
@@ -1154,6 +1183,8 @@
 </li>
         <li><a href="pyapi/grid.molgrid.html#module-grid.molgrid">grid.molgrid</a>
 </li>
+        <li><a href="pyapi/grid.ngrid.html#module-grid.ngrid">grid.ngrid</a>
+</li>
         <li><a href="pyapi/grid.ode.html#module-grid.ode">grid.ode</a>
 </li>
         <li><a href="pyapi/grid.onedgrid.html#module-grid.onedgrid">grid.onedgrid</a>
@@ -1203,6 +1234,8 @@
         <li><a href="pyapi/grid.onedgrid.html#grid.onedgrid.MidPoint.moments">(MidPoint method)</a>
 </li>
         <li><a href="pyapi/grid.molgrid.html#grid.molgrid.MolGrid.moments">(MolGrid method)</a>
+</li>
+        <li><a href="pyapi/grid.ngrid.html#grid.ngrid.Ngrid.moments">(Ngrid method)</a>
 </li>
         <li><a href="pyapi/grid.basegrid.html#grid.basegrid.OneDGrid.moments">(OneDGrid method)</a>
 </li>
@@ -1315,6 +1348,8 @@
         <li><a href="pyapi/grid.cubic.html#grid.cubic.UniformGrid.ndim">(UniformGrid property)</a>
 </li>
       </ul></li>
+      <li><a href="pyapi/grid.ngrid.html#grid.ngrid.Ngrid">Ngrid (class in grid.ngrid)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -1375,6 +1410,8 @@
         <li><a href="pyapi/grid.onedgrid.html#grid.onedgrid.MidPoint.points">(MidPoint property)</a>
 </li>
         <li><a href="pyapi/grid.molgrid.html#grid.molgrid.MolGrid.points">(MolGrid property)</a>
+</li>
+        <li><a href="pyapi/grid.ngrid.html#grid.ngrid.Ngrid.points">(Ngrid property)</a>
 </li>
         <li><a href="pyapi/grid.basegrid.html#grid.basegrid.OneDGrid.points">(OneDGrid property)</a>
 </li>
@@ -1516,6 +1553,8 @@
 </li>
         <li><a href="pyapi/grid.molgrid.html#grid.molgrid.MolGrid.save">(MolGrid method)</a>
 </li>
+        <li><a href="pyapi/grid.ngrid.html#grid.ngrid.Ngrid.save">(Ngrid method)</a>
+</li>
         <li><a href="pyapi/grid.basegrid.html#grid.basegrid.OneDGrid.save">(OneDGrid method)</a>
 </li>
         <li><a href="pyapi/grid.periodicgrid.html#grid.periodicgrid.PeriodicGrid.save">(PeriodicGrid method)</a>
@@ -1611,6 +1650,8 @@
         <li><a href="pyapi/grid.onedgrid.html#grid.onedgrid.MidPoint.size">(MidPoint property)</a>
 </li>
         <li><a href="pyapi/grid.molgrid.html#grid.molgrid.MolGrid.size">(MolGrid property)</a>
+</li>
+        <li><a href="pyapi/grid.ngrid.html#grid.ngrid.Ngrid.size">(Ngrid property)</a>
 </li>
         <li><a href="pyapi/grid.basegrid.html#grid.basegrid.OneDGrid.size">(OneDGrid property)</a>
 </li>
@@ -1797,6 +1838,8 @@
         <li><a href="pyapi/grid.onedgrid.html#grid.onedgrid.MidPoint.weights">(MidPoint property)</a>
 </li>
         <li><a href="pyapi/grid.molgrid.html#grid.molgrid.MolGrid.weights">(MolGrid property)</a>
+</li>
+        <li><a href="pyapi/grid.ngrid.html#grid.ngrid.Ngrid.weights">(Ngrid property)</a>
 </li>
         <li><a href="pyapi/grid.basegrid.html#grid.basegrid.OneDGrid.weights">(OneDGrid property)</a>
 </li>

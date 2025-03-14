@@ -36,8 +36,9 @@
 
           
           
-          <a href="../index.html" class="icon icon-home">
-            grid
+          <a href="../index.html">
+            
+              <img src="../_static/grid_logo_website.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -145,10 +146,22 @@
 <li class="toctree-l3"><a class="reference internal" href="../notebooks/molecular_grid.html#Example:-Electron-Density">Example: Electron Density</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/molecular_grid.html#Local-Properties">Local Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/molecular_grid.html#Interpolation">Interpolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/molecular_grid.html#Derivative-Interpolation">Derivative Interpolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../notebooks/molecular_grid.html#Solving-Poisson-Equation">Solving Poisson Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/molecular_grid.html#Local-Properties">Local Properties</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/molecular_grid.html#Example:-Atomic-charges-from-molecular-electron-density">Example: Atomic charges from molecular electron density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/molecular_grid.html#Interpolation">Interpolation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/molecular_grid.html#id1">Example: Electron Density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/molecular_grid.html#Derivative-Interpolation">Derivative Interpolation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/molecular_grid.html#Example:-Weizsacker-Kinetic-Energy-Density">Example: Weizsacker Kinetic Energy Density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/molecular_grid.html#Solving-Poisson-Equation">Solving Poisson Equation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/molecular_grid.html#Example:-Electrostatic-Potential">Example: Electrostatic Potential</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/cubic_grid.html">Cubic Grids</a><ul>
@@ -198,6 +211,7 @@
 <li class="toctree-l4"><a class="reference internal" href="grid.cubic.html">grid.cubic module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="grid.hirshfeld.html">grid.hirshfeld module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="grid.molgrid.html">grid.molgrid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grid.ngrid.html">grid.ngrid module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="grid.ode.html">grid.ode module</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">grid.onedgrid module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="grid.periodicgrid.html">grid.periodicgrid module</a></li>
@@ -244,7 +258,7 @@
 <p>1D integration grid.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.ClenshawCurtis">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ClenshawCurtis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L597-L660"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ClenshawCurtis" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ClenshawCurtis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L596-L659"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ClenshawCurtis" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Clenshaw-Curtis integral quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -266,7 +280,7 @@ c_j &amp;= \begin{cases}
 and handled separately.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.ClenshawCurtis.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L625-L660"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ClenshawCurtis.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L624-L659"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ClenshawCurtis.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1,1]\)</span> interval based on Clenshaw-Curtis method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -295,7 +309,7 @@ and handled separately.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.ClenshawCurtis.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ClenshawCurtis.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -343,7 +357,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -370,8 +384,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -433,7 +447,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.ExpExp">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExpExp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1188-L1237"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpExp" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExpExp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1187-L1236"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpExp" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Exponential-Exponential quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -450,7 +464,7 @@ w_k = h e^{-e^{-kh}}\left( e^{kh} + 1 \right)\end{split}\]</div>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.ExpExp.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1207-L1237"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpExp.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1206-L1236"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpExp.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on <span class="math notranslate nohighlight">\((0, \infty)\)</span> interval based on exp-exp quadrature.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -482,7 +496,7 @@ w_k = h e^{-e^{-kh}}\left( e^{kh} + 1 \right)\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.ExpExp.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpExp.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -530,7 +544,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -557,8 +571,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -620,7 +634,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.ExpSinh">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExpSinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1082-L1131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpSinh" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExpSinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1081-L1130"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpSinh" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Exponential-Hyperbolic Sine quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -637,7 +651,7 @@ w_k = \exp \left(\frac{\pi}{2}\sinh(k h) \right)\left(\frac{\pi h}{2} \cosh(k h)
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.ExpSinh.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1101-L1131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpSinh.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1100-L1130"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpSinh.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on <span class="math notranslate nohighlight">\((0, \infty)\)</span> interval based on exp-sinh quadrature.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -669,7 +683,7 @@ w_k = \exp \left(\frac{\pi}{2}\sinh(k h) \right)\left(\frac{\pi h}{2} \cosh(k h)
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.ExpSinh.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.ExpSinh.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -717,7 +731,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -744,8 +758,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -807,7 +821,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.FejerFirst">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FejerFirst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L663-L714"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerFirst" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FejerFirst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L662-L713"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerFirst" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Fejer first integral quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -821,7 +835,7 @@ If discontinuous, it is recommended to break the intervals at the discontinuitie
 and handled separately.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.FejerFirst.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L683-L714"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerFirst.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L682-L713"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerFirst.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on <span class="math notranslate nohighlight">\((-1,1)\)</span> interval based on Fejer’s first rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -850,7 +864,7 @@ and handled separately.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.FejerFirst.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerFirst.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -898,7 +912,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -925,8 +939,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -988,7 +1002,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.FejerSecond">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FejerSecond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L717-L768"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerSecond" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FejerSecond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L716-L767"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerSecond" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Fejer Second integral quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -1002,7 +1016,7 @@ method is considered more practical than the first method.  If discontinuous, it
 recommended to break the intervals at the discontinuities and handled separately.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.FejerSecond.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L737-L768"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerSecond.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L736-L767"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerSecond.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\((-1,1)\)</span> interval based on Fejer’s second rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1031,7 +1045,7 @@ recommended to break the intervals at the discontinuities and handled separately
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.FejerSecond.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.FejerSecond.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1079,7 +1093,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -1106,8 +1120,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -1169,7 +1183,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussChebyshev">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GaussChebyshev</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L126-L168"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshev" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GaussChebyshev</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L125-L167"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshev" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Gauss-Chebyshev integral quadrature class.</p>
 <p>The fundamental definition of Gauss-Chebyshev quadrature is:</p>
@@ -1183,7 +1197,7 @@ w_i =&amp; \frac{\pi}{n}\end{split}\]</div>
 \sum_{i=1}^n w_i'g(x_i)\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussChebyshev.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L147-L168"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshev.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L146-L167"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshev.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1, 1]\)</span> interval based on Gauss-Chebyshev quadrature.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1212,7 +1226,7 @@ w_i =&amp; \frac{\pi}{n}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussChebyshev.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshev.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1260,7 +1274,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -1287,8 +1301,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -1350,7 +1364,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussChebyshevLobatto">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GaussChebyshevLobatto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L248-L293"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevLobatto" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GaussChebyshevLobatto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L247-L292"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevLobatto" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Gauss Chebyshev Lobatto integral quadrature class.</p>
 <p>The definition of Gauss-Chebyshev-Lobato quadrature is:</p>
@@ -1365,7 +1379,7 @@ w_{i\neq 1,n} =&amp; \frac{\pi}{n-1}\end{split}\]</div>
 \sum_{i=1}^n w_i' g(x_i)\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussChebyshevLobatto.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L269-L293"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevLobatto.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L268-L292"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevLobatto.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1, 1]\)</span> interval based on Gauss-Chebyshev-Lobatto quadrature.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1394,7 +1408,7 @@ w_{i\neq 1,n} =&amp; \frac{\pi}{n-1}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussChebyshevLobatto.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevLobatto.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1442,7 +1456,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -1469,8 +1483,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -1532,7 +1546,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussChebyshevType2">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GaussChebyshevType2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L205-L245"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevType2" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GaussChebyshevType2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L204-L244"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevType2" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Gauss Chebyshev Type2 integral quadrature class.</p>
 <p>The definition of the Gauss-Chebyshev of the second kind quadrature is:</p>
@@ -1546,7 +1560,7 @@ w_i =&amp; \frac{\pi}{n+1} \sin^2 \left( \frac{i}{n+1} \pi \right)\end{split}\]<
 \sum_{i=1}^n w_i' g(x_i)\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussChebyshevType2.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L226-L245"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevType2.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L225-L244"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevType2.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1, 1]\)</span> interval based on Gauss-Chebyshev Type 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1575,7 +1589,7 @@ w_i =&amp; \frac{\pi}{n+1} \sin^2 \left( \frac{i}{n+1} \pi \right)\end{split}\]<
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussChebyshevType2.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussChebyshevType2.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1623,7 +1637,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -1650,8 +1664,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -1758,7 +1772,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussLaguerre.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussLaguerre.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1806,7 +1820,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -1833,8 +1847,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -1896,7 +1910,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussLegendre">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GaussLegendre</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L83-L123"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussLegendre" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GaussLegendre</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L83-L122"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussLegendre" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Gauss-Legendre integral quadrature class.</p>
 <p>The definition of Gauss-Legendre quadrature is:</p>
@@ -1906,7 +1920,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 roots of the nth Legendre polynomial.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussLegendre.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L99-L123"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussLegendre.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L99-L122"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussLegendre.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1, 1]\)</span> interval based on Gauss-Legendre quadrature.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1921,9 +1935,8 @@ roots of the nth Legendre polynomial.</p>
 </dl>
 <p class="rubric">Notes</p>
 <ul class="simple">
-<li><p>Only known to be accurate up to <a href="#id1"><span class="problematic" id="id2">`</span></a>npoints`=100 and may cause problems after</p></li>
+<li><p>Only known to be accurate up to <cite>npoints</cite>=100 and may cause problems after that amount.</p></li>
 </ul>
-<p>that amount.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1940,7 +1953,7 @@ roots of the nth Legendre polynomial.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.GaussLegendre.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.GaussLegendre.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1988,7 +2001,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -2015,8 +2028,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -2078,7 +2091,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.LogExpSinh">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogExpSinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1134-L1185"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.LogExpSinh" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogExpSinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1133-L1184"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.LogExpSinh" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Logarithm-Exponential-Hyperbolic Sine quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -2096,7 +2109,7 @@ w_k = \frac{\pi h\cosh(kh)\exp(\frac{\pi}{2}\sinh(kh))}
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.LogExpSinh.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1154-L1185"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.LogExpSinh.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1153-L1184"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.LogExpSinh.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on <span class="math notranslate nohighlight">\((0, \infty)\)</span> interval based on log-exp-sinh quadrature.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2128,7 +2141,7 @@ w_k = \frac{\pi h\cosh(kh)\exp(\frac{\pi}{2}\sinh(kh))}
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.LogExpSinh.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.LogExpSinh.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2176,7 +2189,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -2203,8 +2216,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -2266,7 +2279,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.MidPoint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MidPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L560-L594"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.MidPoint" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MidPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L559-L593"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.MidPoint" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>MidPoint integral quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -2276,7 +2289,7 @@ x_i =&amp; -1 + \frac{2i + 1}{n} \\
 w_i =&amp; \frac{2}{n}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.MidPoint.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L574-L594"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.MidPoint.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L573-L593"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.MidPoint.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1, 1]\)</span> interval based on Mid-Point rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2305,7 +2318,7 @@ w_i =&amp; \frac{2}{n}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.MidPoint.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.MidPoint.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2353,7 +2366,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -2380,8 +2393,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -2443,9 +2456,9 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.RectangleRuleSineEndPoints">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RectangleRuleSineEndPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L337-L393"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.RectangleRuleSineEndPoints" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RectangleRuleSineEndPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L336-L392"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.RectangleRuleSineEndPoints" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
-<p>Rectangle-Rule Sine end points integral quadrature class.</p>
+<p>Rectangle-Rule Sine end points integral quadrature class. <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[\begin{split}\int_{-1}^{1} f(x) dx \approx&amp; \sum_{i=1}^n w_i f(x_i) \\
@@ -2458,13 +2471,13 @@ by <span class="math notranslate nohighlight">\(q=2x-1\)</span> to the interval 
 \[2 \int_{0}^{1} f(x) dx = \int_{-1}^{1} f(q) dq\]</div>
 <p class="rubric">References</p>
 <dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets">1</span></dt>
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Boyd, John P. Chebyshev and Fourier spectral methods. Courier Corporation, 2001.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.RectangleRuleSineEndPoints.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L360-L393"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.RectangleRuleSineEndPoints.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L359-L392"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.RectangleRuleSineEndPoints.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1, 1]\)</span> using rectangle rule for Sine Series (with endpoints).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2493,7 +2506,7 @@ by <span class="math notranslate nohighlight">\(q=2x-1\)</span> to the interval 
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.RectangleRuleSineEndPoints.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.RectangleRuleSineEndPoints.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2541,7 +2554,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -2568,8 +2581,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -2631,7 +2644,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.Simpson">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Simpson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L509-L557"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Simpson" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Simpson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L508-L556"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Simpson" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Simpson integral quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -2647,7 +2660,7 @@ w_i &amp;= \begin{cases}
 \end{cases}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.Simpson.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L531-L557"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Simpson.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L530-L556"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Simpson.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1,1]\)</span> interval based on Simpson rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2676,7 +2689,7 @@ w_i &amp;= \begin{cases}
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.Simpson.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Simpson.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2724,7 +2737,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -2751,8 +2764,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -2814,7 +2827,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.SingleArcSinhExp">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleArcSinhExp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1336-L1385"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleArcSinhExp" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleArcSinhExp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1335-L1384"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleArcSinhExp" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Single Arc Hyperbolic Sine-Exponential quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -2831,7 +2844,7 @@ w_k = \frac{h e^{kh}}{\sqrt{e^{2kh} + 1}}\end{split}\]</div>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.SingleArcSinhExp.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1355-L1385"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleArcSinhExp.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1354-L1384"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleArcSinhExp.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on <span class="math notranslate nohighlight">\((0, \infty)\)</span> interval based on tanh-sinh quadrature.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2863,7 +2876,7 @@ w_k = \frac{h e^{kh}}{\sqrt{e^{2kh} + 1}}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.SingleArcSinhExp.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleArcSinhExp.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2911,7 +2924,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -2938,8 +2951,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -3001,7 +3014,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.SingleExp">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleExp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1284-L1333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleExp" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleExp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1283-L1332"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleExp" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Single exponential quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -3018,7 +3031,7 @@ w_k = h e^{kh}.\end{split}\]</div>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.SingleExp.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1303-L1333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleExp.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1302-L1332"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleExp.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on <span class="math notranslate nohighlight">\((0, \infty)\)</span> interval based on exponential quadrature.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3050,7 +3063,7 @@ w_k = h e^{kh}.\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.SingleExp.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleExp.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3098,7 +3111,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -3125,8 +3138,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -3188,7 +3201,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.SingleTanh">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleTanh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1240-L1281"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleTanh" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleTanh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1239-L1280"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleTanh" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Hyperbolic Tan quadrature class.</p>
 <p>The definition of this quadrature is:</p>
@@ -3199,7 +3212,7 @@ x_k = \tanh{kh}  \\
 w_k = \frac{h}{\cosh^2(kh)}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.SingleTanh.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1255-L1281"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleTanh.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1254-L1280"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleTanh.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on <span class="math notranslate nohighlight">\((-1, +1)\)</span> interval based on tanh-sinh quadrature.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3231,7 +3244,7 @@ w_k = \frac{h}{\cosh^2(kh)}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.SingleTanh.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.SingleTanh.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3279,7 +3292,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -3306,8 +3319,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -3369,7 +3382,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.TanhSinh">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TanhSinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L459-L506"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TanhSinh" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TanhSinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L458-L505"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TanhSinh" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Tanh Sinh integral quadrature class.</p>
 <p>The definition of the quadrature is:</p>
@@ -3381,7 +3394,7 @@ w_i =&amp; \frac{\frac{\pi}{2}\delta \cosh(i\delta)}{\cosh^2(\frac{\pi}{2}\sinh(
 endpoints of <span class="math notranslate nohighlight">\([-1, 1]\)</span>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TanhSinh.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L477-L506"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TanhSinh.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L476-L505"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TanhSinh.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1, 1]\)</span> interval based on Tanh-Sinh rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3413,7 +3426,7 @@ endpoints of <span class="math notranslate nohighlight">\([-1, 1]\)</span>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TanhSinh.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TanhSinh.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3461,7 +3474,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -3488,8 +3501,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -3551,7 +3564,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.Trapezoidal">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Trapezoidal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L296-L334"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Trapezoidal" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Trapezoidal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L295-L333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Trapezoidal" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>Trapezoidal Lobatto integral quadrature class.</p>
 <p>The fundamental definition of Trapezoidal rule is:</p>
@@ -3562,7 +3575,7 @@ w_1 = w_n =&amp; \frac{1}{n} \\
 w_{i\neq 1,n} =&amp; \frac{2}{n}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.Trapezoidal.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L312-L334"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Trapezoidal.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L311-L333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Trapezoidal.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on [-1, 1] interval based on Trapezoidal (Euler-Maclaurin) rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3591,7 +3604,7 @@ w_{i\neq 1,n} =&amp; \frac{2}{n}\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.Trapezoidal.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.Trapezoidal.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3639,7 +3652,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -3666,8 +3679,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -3729,19 +3742,19 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenCC">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenCC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L796-L839"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenCC" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenCC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L795-L838"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenCC" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
-<p>Trefethen polynomial transformation of Clenshaw-Curtis integral quadrature class.</p>
+<p>Trefethen polynomial transformation of Clenshaw-Curtis integral quadrature class <a class="footnote-reference brackets" href="#id4" id="id3">2</a>.</p>
 <p class="rubric">References</p>
 <dl class="footnote brackets">
-<dt class="label" id="id4"><span class="brackets">2</span></dt>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
 <dd><p>Hale, Nicholas, and Lloyd N. Trefethen. “New quadrature formulas from conformal maps.”
 SIAM Journal on Numerical Analysis 46.2 (2008): 930-948.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenCC.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L809-L839"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenCC.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L808-L838"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenCC.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on <span class="math notranslate nohighlight">\([-1,1]\)</span> interval based on Trefethen-Clenshaw-Curtis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3774,7 +3787,7 @@ Only d=1,5,9 are supported.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenCC.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenCC.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3822,7 +3835,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -3849,8 +3862,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -3912,19 +3925,19 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenGC2">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenGC2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L842-L885"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGC2" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenGC2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L841-L884"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGC2" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
-<p>Trefethen polynomial transformation of Gauss-Chebyshev of the second kind quadrature.</p>
+<p>Trefethen polynomial transformation of Gauss-Chebyshev of the second kind quadrature <a class="footnote-reference brackets" href="#id6" id="id5">3</a>.</p>
 <p class="rubric">References</p>
 <dl class="footnote brackets">
-<dt class="label" id="id5"><span class="brackets">3</span></dt>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
 <dd><p>Hale, Nicholas, and Lloyd N. Trefethen. “New quadrature formulas from conformal maps.”
 SIAM Journal on Numerical Analysis 46.2 (2008): 930-948.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenGC2.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L855-L885"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGC2.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L854-L884"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGC2.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on [-1,1] interval based on Trefethen-Gauss-Chebyshev.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3957,7 +3970,7 @@ Only d=1,5,9 are supported.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenGC2.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGC2.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4005,7 +4018,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -4032,8 +4045,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -4095,19 +4108,19 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenGeneral">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenGeneral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L888-L936"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGeneral" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenGeneral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L887-L935"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGeneral" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
-<p>Trefethen polynomial transformation of a general integral quadrature class.</p>
+<p>Trefethen polynomial transformation of a general integral quadrature class <a class="footnote-reference brackets" href="#id8" id="id7">4</a>.</p>
 <p class="rubric">References</p>
 <dl class="footnote brackets">
-<dt class="label" id="id6"><span class="brackets">4</span></dt>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id7">4</a></span></dt>
 <dd><p>Hale, Nicholas, and Lloyd N. Trefethen. “New quadrature formulas from conformal maps.”
 SIAM Journal on Numerical Analysis 46.2 (2008): 930-948.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenGeneral.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L901-L936"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGeneral.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L900-L935"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGeneral.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate 1D grid on <span class="math notranslate nohighlight">\([-1,1]\)</span> interval based on Trefethen-General.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4141,7 +4154,7 @@ Only d=1,5,9 are supported.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenGeneral.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenGeneral.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4189,7 +4202,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -4216,8 +4229,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -4279,19 +4292,19 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenStripCC">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenStripCC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L984-L1013"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripCC" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenStripCC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L983-L1012"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripCC" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
-<p>Trefethen strip transformation of Clenshaw-Curtis quadrature.</p>
+<p>Trefethen strip transformation of Clenshaw-Curtis quadrature <a class="footnote-reference brackets" href="#id10" id="id9">5</a>.</p>
 <p class="rubric">References</p>
 <dl class="footnote brackets">
-<dt class="label" id="id7"><span class="brackets">5</span></dt>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id9">5</a></span></dt>
 <dd><p>Hale, Nicholas, and Lloyd N. Trefethen. “New quadrature formulas from conformal maps.”
 SIAM Journal on Numerical Analysis 46.2 (2008): 930-948.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenStripCC.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L996-L1013"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripCC.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L995-L1012"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripCC.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1,1]\)</span> interval based on Trefethen-Clenshaw-Curtis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4320,7 +4333,7 @@ SIAM Journal on Numerical Analysis 46.2 (2008): 930-948.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenStripCC.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripCC.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4368,7 +4381,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -4395,8 +4408,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -4458,19 +4471,19 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenStripGC2">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenStripGC2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1016-L1046"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGC2" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenStripGC2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1015-L1045"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGC2" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
-<p>Trefethen strip transformation of the Gauss-Chebyshev of the second kind quadrature.</p>
+<p>Trefethen strip transformation of the Gauss-Chebyshev of the second kind quadrature <a class="footnote-reference brackets" href="#id12" id="id11">6</a>.</p>
 <p class="rubric">References</p>
 <dl class="footnote brackets">
-<dt class="label" id="id8"><span class="brackets">6</span></dt>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id11">6</a></span></dt>
 <dd><p>Hale, Nicholas, and Lloyd N. Trefethen. “New quadrature formulas from conformal maps.”
 SIAM Journal on Numerical Analysis 46.2 (2008): 930-948.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenStripGC2.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1028-L1046"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGC2.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1027-L1045"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGC2.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1,1]\)</span> interval based on Trefethen-Gauss-Chebyshev.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4499,7 +4512,7 @@ SIAM Journal on Numerical Analysis 46.2 (2008): 930-948.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenStripGC2.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGC2.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4547,7 +4560,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -4574,8 +4587,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -4637,19 +4650,19 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenStripGeneral">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenStripGeneral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1049-L1079"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGeneral" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrefethenStripGeneral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1048-L1078"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGeneral" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
-<p>Trefethen Strip General integral quadrature class.</p>
+<p>Trefethen Strip General integral quadrature class <a class="footnote-reference brackets" href="#id14" id="id13">7</a>.</p>
 <p class="rubric">References</p>
 <dl class="footnote brackets">
-<dt class="label" id="id9"><span class="brackets">7</span></dt>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id13">7</a></span></dt>
 <dd><p>Hale, Nicholas, and Lloyd N. Trefethen. “New quadrature formulas from conformal maps.”
 SIAM Journal on Numerical Analysis 46.2 (2008): 930-948.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenStripGeneral.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1061-L1079"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGeneral.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L1060-L1078"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGeneral.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on <span class="math notranslate nohighlight">\([-1,1]\)</span> interval based on Trefethen-General.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4678,7 +4691,7 @@ SIAM Journal on Numerical Analysis 46.2 (2008): 930-948.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.TrefethenStripGeneral.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.TrefethenStripGeneral.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4726,7 +4739,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -4753,8 +4766,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -4816,7 +4829,7 @@ each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="grid.onedgrid.UniformInteger">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UniformInteger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L171-L202"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.UniformInteger" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UniformInteger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L170-L201"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.UniformInteger" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="grid.basegrid.html#grid.basegrid.OneDGrid" title="grid.basegrid.OneDGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneDGrid</span></code></a></p>
 <p>HORTON2 integral quadrature (HortonLinear) class.</p>
 <div class="math notranslate nohighlight">
@@ -4825,7 +4838,7 @@ x_i =&amp; i - 1 \\
 w_i =&amp; 1.0\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.UniformInteger.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L184-L202"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.UniformInteger.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npoints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/onedgrid.py#L183-L201"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.UniformInteger.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Generate grid on [0, npoints] interval using equally spaced uniform distribution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4854,7 +4867,7 @@ w_i =&amp; 1.0\end{split}\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="grid.onedgrid.UniformInteger.get_localgrid">
 <span class="sig-name descname"><span class="pre">get_localgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/theochem/grid/blob/master/src/grid/basegrid.py#L148-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#grid.onedgrid.UniformInteger.get_localgrid" title="Permalink to this definition"></a></dt>
-<dd><p>Create a grid contain points within the given radius of center.</p>
+<dd><p>Create a grid containing points within the given radius of center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4902,7 +4915,7 @@ with its weights:</p>
 <div class="math notranslate nohighlight">
 \[m_{n_x, n_y, n_z} = \int (x - X_c)^{n_x} (y - Y_c)^{n_y} (z - Z_c)^{n_z} f(r) dr,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\textbf{R}_c = (X_c, Y_c, Z_c)\)</span> is the center of the moment,
-<span class="math notranslate nohighlight">\(\f(r)\)</span> is the density, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
+<span class="math notranslate nohighlight">\(f(r)\)</span> is the function, and <span class="math notranslate nohighlight">\((n_x, n_y, n_z)\)</span> are the Cartesian orders.</p>
 <p>The spherical/pure moments with <span class="math notranslate nohighlight">\((l, m)\)</span> parameter are:</p>
 <div class="math notranslate nohighlight">
 \[m_{lm} = \int | \textbf{r} - \textbf{R}_c|^l S_l^m(\theta, \phi) f(\textbf{r})
@@ -4929,8 +4942,8 @@ corresponding to each integral/row of the output.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m`th center for all orders.
-If `return_orders</cite> is true, then this also returns a list that describes what
+<dd class="field-even"><p>Computes the moment integral of the function on the <cite>m</cite>th center for all orders.
+If <cite>return_orders</cite> is true, then this also returns a list that describes what
 each row/order is, e.g. for Cartesian, [(0, 0, 0), (1, 0, 0) ,…].</p>
 </dd>
 <dt class="field-odd">Return type</dt>

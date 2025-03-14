@@ -37,8 +37,9 @@
 
           
           
-          <a href="../index.html" class="icon icon-home">
-            grid
+          <a href="../index.html">
+            
+              <img src="../_static/grid_logo_website.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -146,10 +147,22 @@
 <li class="toctree-l3"><a class="reference internal" href="molecular_grid.html#Example:-Electron-Density">Example: Electron Density</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="molecular_grid.html#Local-Properties">Local Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="molecular_grid.html#Interpolation">Interpolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="molecular_grid.html#Derivative-Interpolation">Derivative Interpolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="molecular_grid.html#Solving-Poisson-Equation">Solving Poisson Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="molecular_grid.html#Local-Properties">Local Properties</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="molecular_grid.html#Example:-Atomic-charges-from-molecular-electron-density">Example: Atomic charges from molecular electron density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="molecular_grid.html#Interpolation">Interpolation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="molecular_grid.html#id1">Example: Electron Density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="molecular_grid.html#Derivative-Interpolation">Derivative Interpolation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="molecular_grid.html#Example:-Weizsacker-Kinetic-Energy-Density">Example: Weizsacker Kinetic Energy Density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="molecular_grid.html#Solving-Poisson-Equation">Solving Poisson Equation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="molecular_grid.html#Example:-Electrostatic-Potential">Example: Electrostatic Potential</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cubic_grid.html">Cubic Grids</a><ul>
@@ -199,6 +212,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../pyapi/grid.cubic.html">grid.cubic module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../pyapi/grid.hirshfeld.html">grid.hirshfeld module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../pyapi/grid.molgrid.html">grid.molgrid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pyapi/grid.ngrid.html">grid.ngrid module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../pyapi/grid.ode.html">grid.ode module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../pyapi/grid.onedgrid.html">grid.onedgrid module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../pyapi/grid.periodicgrid.html">grid.periodicgrid module</a></li>
@@ -244,6 +258,21 @@
 <p><a class="reference external" href="https://grid.qcdevs.org/pyapi/grid.atomgrid.html#grid.atomgrid.AtomGrid">AtomGrid</a> constructs an atomic grid by combining a radial and angular components for evaluation, integration, interpolation, and differentiation in three-dimensional (3D) space. In quantum chemistry, this is typically used for computations of atomic properties. However, this is a general purpose grid that can be used for any function in 3D space.</p>
 <p>This notebook showcases various functionalities of <a class="reference external" href="https://grid.qcdevs.org/pyapi/grid.atomgrid.html#grid.atomgrid.AtomGrid">AtomGrid</a>. For computing properties on the grid, we use <span class="math notranslate nohighlight">\(\textbf{He}\)</span> in the triplet state (<span class="math notranslate nohighlight">\(1s^1 2s^1\)</span>) as an example. The corresponding wavefunction is obtained from formatted checkpoint file <code class="docutils literal notranslate"><span class="pre">&quot;doc/notebooks/He_t.fchk&quot;</span></code>. The <a class="reference external" href="https://github.com/theochem/iodata">qc-iodata</a> package is used for parsing the wavefuction data from the fchk file, and
 <a class="reference external" href="https://github.com/theochem/gbasis">qc-gbasis</a> package is used for analytical evaluation of various properties in the grid.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Install packages in Google Colab</span>
+<span class="c1"># ! pip install qc-iodata</span>
+<span class="c1"># ! pip install qc-grid</span>
+<span class="c1"># ! pip install qc-gbasis</span>
+
+<span class="c1"># # Download the example files</span>
+<span class="c1"># from urllib.request import urlretrieve</span>
+<span class="c1"># urlretrieve(&quot;https://raw.githubusercontent.com/theochem/grid/refs/heads/master/examples/He_t.fchk&quot;,&quot;He_t.fchk&quot;)</span>
+</pre></div>
+</div>
+</div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
@@ -274,7 +303,7 @@ Beta MO occupations : [0. 0.]
 </div>
 <div class="section" id="Construct-Atomic-Grid">
 <h2>Construct Atomic Grid<a class="headerlink" href="#Construct-Atomic-Grid" title="Permalink to this heading"></a></h2>
-<p>There are multiple ways to construct an atomic grid, for a complete description see the <a href="#id1"><span class="problematic" id="id2">`Atomic_Grid_Construction.ipynb &lt;&gt;`__</span></a>.</p>
+<p>There are multiple ways to construct an atomic grid, for a complete description see the <a class="reference external" href=".https://grid.qcdevs.org/notebooks/notebooks/atom_grid_construction.html">Atomic_Grid_Construction.ipynb</a>.</p>
 <p>Here we construct an atomic grid from a radial grid instance and the degrees of the angular grid centered at the position of <span class="math notranslate nohighlight">\(\textbf{He}\)</span> nucleus. The radial grid is constructed by specifying the number of radial grid points. For more details on the radial and angular grids see <a class="reference external" href="https://grid.qcdevs.org/notebooks/one_dimensional_grids.html">One_dimensional_grids.ipynb</a> and <a class="reference external" href="https://grid.qcdevs.org/notebooks/angular_grid.html">Angular_Grid.ipynb</a>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -412,7 +441,7 @@ Max difference between radial_dens_1 and radial_dens_2: 2.220446049250313e-16
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_atom_grid_8_1.png" src="../_images/notebooks_atom_grid_8_1.png" />
+<img alt="../_images/notebooks_atom_grid_9_1.png" src="../_images/notebooks_atom_grid_9_1.png" />
 </div>
 </div>
 <p>To identify the local maxima of radial electron density and corresponding radii, the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html">scipy.signal.find_peaks</a> is used.</p>
